@@ -1,0 +1,199 @@
+\documentclass{customIMTbeamer/imt_pres}
+% \documentclass[aspectratio=169]{customIMTbeamer/imt_pres}
+
+%=========================================================================================
+%================== TITLE ETC...
+%=========================================================================================
+
+\title[IMTBeamerTemplate]{IMT Beamer Template}
+\subtitle{This seems to be a quite long and useless subtitle}
+
+\author{
+Alexandre Le Borgne~\inst{1}\\ \and 
+David Delahaye~\inst{2}\\ \and 
+Marianne Huchard~\inst{2}\\ \and 
+Christelle Urtado~\inst{1}\\ \and
+Sylvain Vauttier~\inst{1}}
+
+\institute{\inst{1} LGI2P, IMT Mines Ales \& Montpellier University, Ales, France \and %
+                      \inst{2} Montpellier University, CNRS, LIRMM, Montpellier, France}
+
+\date{Date of Presentation}
+
+\hypersetup{
+pdfauthor = {Alexandre Le Borgne: https://alexandreleborgne.wp.imt.fr/},
+pdfsubject = {Beamer},
+pdfkeywords = {Beamer theme, imt},
+pdfmoddate= {D:\pdfdate},
+pdfcreator = {}
+}
+
+\begin{document}
+	
+	\imttitlepage
+	\begin{imttoc}
+		% For longer presentations use hideallsubsections option
+        \begin{spacing}{.9}
+		\tableofcontents%[hideallsubsections]
+        \end{spacing}
+%         \tableofcontents[sections={1}]
+%     	\framebreak
+%   		\tableofcontents[sections={1-2}]
+    \end{imttoc}
+
+\section{Introduction}
+
+\begin{frame}{Introduction}
+
+\begin{itemize}
+  \item Your introduction goes here!
+  \item Use \texttt{itemize} to organize your main points.
+\end{itemize}
+
+\vskip 1cm
+
+\begin{block}{Examples}
+Some examples of commonly used commands and features are included, to help you get started.
+\end{block}
+
+\end{frame}
+
+\section{Some \LaTeX{} Examples}
+
+\subsection{Tables and Figures}
+
+\begin{frame}{Tables and Figures}
+
+\begin{itemize}
+\item Use \texttt{tabular} for basic tables --- see Table~\ref{tab:widgets}, for example.
+\item You can upload a figure (JPEG, PNG or PDF) using the files menu. 
+\item To include it in your document, use the \texttt{includegraphics} command (see the comment below in the source code).
+\end{itemize}
+
+% Commands to include a figure:
+%\begin{figure}
+%\includegraphics[width=\textwidth]{your-figure's-file-name}
+%\caption{\label{fig:your-figure}Caption goes here.}
+%\end{figure}
+
+\begin{table}
+\centering
+\begin{tabular}{l|r}
+Item & Quantity \\\hline
+Widgets & 42 \\
+Gadgets & 13
+\end{tabular}
+\caption{\label{tab:widgets}An example table.}
+\end{table}
+
+\end{frame}
+
+\subsection{Mathematics}
+
+\begin{frame}{Readable Mathematics}
+
+Let $X_1, X_2, \ldots, X_n$ be a sequence of independent and identically distributed random variables with $\text{E}[X_i] = \mu$ and $\text{Var}[X_i] = \sigma^2 < \infty$, and let
+$$S_n = \frac{X_1 + X_2 + \cdots + X_n}{n}
+      = \frac{1}{n}\sum_{i}^{n} X_i$$
+denote their mean. Then as $n$ approaches infinity, the random variables $\sqrt{n}(S_n - \mu)$ converge in distribution to a normal $\mathcal{N}(0, \sigma^2)$.
+
+\end{frame}
+
+\section{Blocks}\label{Blocks}
+
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	FRAME: Blocks
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\begin{frame}{Blocks}
+
+\begin{block}{Block Title Here}
+		Great for definitions
+\end{block}
+
+\begin{alertblock}{Alert Title Here}
+		Great for definitions
+\end{alertblock}
+
+\begin{exampleblock}{Example Title Here}
+		Great for examples
+\end{exampleblock}
+\end{frame}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	FRAME: Blocks
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\begin{frame}{Blocks}
+
+\begin{block}{Block Title Here}
+	\begin{itemize}
+		\item point 1
+		\item point 2
+	\end{itemize}
+\end{block}
+
+\begingroup
+\setbeamercolor{block title}{fg=white, bg=\cnBlue}
+\setbeamercolor{block body}{bg=\cnLightBlue}
+\begin{block}{Blue Colored Blocks}
+	Produced by using the \texttt{cblock} theme option
+\end{block}
+\endgroup
+\end{frame}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	FRAME: Additional Blocks
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\begin{frame}{Additional Blocks}
+\begin{alertblock}{Alert Block}
+	Highlight important information.
+\end{alertblock}
+
+\begingroup
+\setbeamercolor{block title}{fg=white, bg=\cnRed}
+\setbeamercolor{block body}{bg=\cnLightRed}
+\begin{block}{Red Colored Blocks}
+	Produced by using the \texttt{cblock} theme option
+\end{block}
+\endgroup
+\end{frame}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	FRAME: Additional Blocks
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\begin{frame}{Additional Blocks}
+
+\begin{exampleblock}{Example Block}
+	Examples can be good.
+\end{exampleblock}
+
+\begingroup
+\setbeamercolor{block title}{fg=white, bg=\cnRed}
+\setbeamercolor{block body}{bg=\cnLightRed}
+\begin{block}{Red Colored Blocks}
+	Produced by using the \texttt{cblock} theme option
+\end{block}
+\endgroup
+
+\end{frame}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	FRAME: Blocks
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\begin{frame}{Custom Blocks}
+\begingroup
+\setbeamercolor{block title}{fg=white, bg=\cnDarkBlue}
+\setbeamercolor{block body}{bg=\cnLightBlue}
+\begin{block}{DarkBlue customization}
+	Using the theme colors to generate colored blocks.
+\end{block}
+\endgroup
+
+\end{frame}
+
+\end{document}
